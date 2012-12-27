@@ -5,7 +5,7 @@
 	<% @lists.each do |list| %>
 		<tr>
 			<td>
-				<%= link_to list.title, list_path(list) %>
+				<%= link_to list.title, list_path(list) %> - last updated <%="#{time_ago_in_words(list.updated_at)} ago "%>
 			</td>
 		</tr>
 	</tbody>
